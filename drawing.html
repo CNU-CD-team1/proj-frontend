@@ -132,11 +132,10 @@
     <!-- 생성된 이미지 -->
     <div class="row row-cols-1 row-cols-md-2 center-line" style="margin: 0px; padding: 0px;">
       {% for image in generated_image %}
-      <div class="col mb-4" style="margin: 0px; padding: 0px;"><img src="{{ image|default(url_for('static', filename='images/default.png', _external=True)) }}" 
-        width="100%" style="max-width: 350px;" class="img-style p-3 mb-5 bg-body-tertiary rounded" 
+      <div class="col d-flex" style="margin: 0px; padding: 0px;"><img src="{{ image|default(url_for('static', filename='images/default.png', _external=True)) }}" 
+        width="100%" style="max-width: 350px;" class="w-100 h-100 img-style p-3 mb-3 bg-body-tertiary rounded" 
         onClick="imgSelect({{ loop.index - 1 }})" id="clickimg{{ loop.index - 1 }}">
       </div>
-      
       {% endfor %}
     </div>
 
